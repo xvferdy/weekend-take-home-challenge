@@ -9,7 +9,6 @@ function useFetchState(apiUrl, isLoading = false) {
     const fetchData = () => {
       axios
         .get(apiUrl)
-
         .then((res) => {
           setState(res.data);
           setLoaded(true);

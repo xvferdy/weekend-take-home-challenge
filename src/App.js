@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 // components
 import CustomAppBar from "./components/CustomAppBar";
@@ -10,7 +12,7 @@ import { createMuiTheme, ThemeProvider } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { Container, Grid, Typography, Button, Box } from "@material-ui/core";
 
-// file + image
+// file + images
 import "./App.css";
 import myData from "./utils/myData";
 import Background from "./assets/bg-1@2x.png";
@@ -116,6 +118,10 @@ const theme = createMuiTheme({
 function App() {
   const classes = useStyles();
 
+  useEffect(() => {
+    Aos.init({ duration: 1500 });
+  }, []);
+
   const {
     sectionAppBar,
     sectionFooter,
@@ -203,6 +209,7 @@ function App() {
                     color: "white",
                     marginTop: "30px",
                   }}
+                  data-aos="fade-left"
                 >
                   <Box component="span" fontStyle="italic">
                     {sectionQuote.person}
@@ -235,7 +242,7 @@ function App() {
               style={{ paddingTop: "30px" }}
               justify="center"
             >
-              <Grid item xs={12} md={10}>
+              <Grid item xs={12} md={10} data-aos="fade-up">
                 <Typography variant="h4" className={classes.subJudul}>
                   <Box component="span" fontWeight="fontWeightBold">
                     {sectionTestimonial.judul}
@@ -294,7 +301,7 @@ function App() {
 
             {/* Section Close */}
             <Grid container className={classes.container2} justify="center">
-              <Grid item xs={11} sm={10} md={8}>
+              <Grid item xs={11} sm={10} md={8} data-aos="fade-up">
                 <Typography variant="h4" className={classes.subJudul}>
                   <Box component="span" fontWeight="fontWeightBold">
                     {sectionClose.judul}
