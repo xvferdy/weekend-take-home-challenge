@@ -18,10 +18,6 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: "wrap",
     justifyContent: "center",
   },
-  gridList: {
-    width: "100%",
-    height: "100%",
-  },
   icon: {
     color: "rgba(255, 255, 255, 0.54)",
   },
@@ -34,11 +30,7 @@ function Tips({ apiUrl }) {
   return (
     <>
       {isloading ? (
-        <GridList
-          className={classes.gridList}
-          className={classes.root}
-          spacing={10}
-        >
+        <GridList className={classes.root} spacing={10}>
           {apiData.map((tip) => (
             <GridListTile style={{ width: "311px" }} key={tip.id}>
               <img src={tip.image} alt="Tips" />
