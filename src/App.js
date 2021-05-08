@@ -233,13 +233,20 @@ function App() {
 
         {/* @@@@@***====pErBaTaSaN====***@@@@@ */}
 
-        <div style={{ backgroundColor: "black" }}>
+        <div
+          style={{
+            background: "linear-gradient(180deg, #eebece 10%, #000 10%)",
+          }}
+        >
           <Container>
             {/* Section Testimonial */}
             <Grid
               container
               className={classes.container2}
-              style={{ paddingTop: "30px" }}
+              style={{
+                paddingTop: "30px",
+                backgroundColor: "inherit ",
+              }}
               justify="center"
             >
               <Grid item xs={12} md={10} data-aos="fade-up">
