@@ -1,6 +1,7 @@
 {
   "name": "take-home-challenge",
   "version": "0.1.0",
+  "homepage": "https://xvferdy.github.io/weekend-take-home-challenge/",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.4",
